@@ -1,27 +1,27 @@
 var varHeader = `    
-<nav class="bg-yellow-200">
-        <div class="bg-yellow-200 flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+    <header class="header">
+        <div id="nav-container" class="bg-yellow-200 flex flex-wrap items-center p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/src/img/vinillo.png" class="h-16" alt="Logo">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap">Disco Barber</span>
             </a>
-            <div class="bg-yellow-200 max-w-screen-xl px-4 py-3 mx-auto">
-                <div class="flex items-center">
-                    <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-                        <li>
-                            <a id="red" href="#" class="text-gray-900 hover:underline">AGENDAR CITA</a>
-                        </li>
-                        <li>
-                            <a id="red" href="#" class="text-gray-900 hover:underline">INFORMACION</a>
-                        </li>
-                        <li>
-                            <a id="red" href="#" class="text-gray-900 hover:underline">PRODUCTOS</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <nav id="supernav" class="supernav">
+                <ul class="nav--ul__one">
+                    <li class="nav-link">
+                        <a id="red" href="#" class="text-gray-900 hover:underline">AGENDAR CITA</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="red" href="#" class="text-gray-900 hover:underline">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="red" href="#" class="text-gray-900 hover:underline">INFORMACION</a>
+                    </li>
+                </ul>
+            </nav>
+            <span id="hamburgerSuperMenu">menu</span>
         </div>
-    </nav>`;
+    </header>
+`;
 class supaHeader extends HTMLElement {
     constructor(){
         super();

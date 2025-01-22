@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    width:100%;
 }
 
 ul {
@@ -17,27 +18,18 @@ a {
     color: inherit;
 }
 header {
-    background: #4D4DDB;
-    color: white;
     padding: .5rem 0;
+    background-color: #fef08a ;
 }
 
-.nav-container {
+#nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 90%;
     margin: 0 auto;
 }
-
-
-.nav-container .logo {
-    font-size: 2rem; 
-    font-weight: bold;  
-}
-
-.nav {
+.supernav {
     display: flex;
     flex-grow: 1;
 }
@@ -46,35 +38,29 @@ header {
     margin: 0 auto;
 }
 
-.nav-container, .nav--ul__one,
-.nav--ul__two {
+#nav-container, .nav--ul__one {
     display: flex;
     gap: 1.6rem;
     font-size: 1.2rem;
 }
 
 #hamburgerSuperMenu {
-    display: none; /* Hidden by default for larger screens */
+    display: none; 
     cursor: pointer;
 }
 @media (max-width: 700px) {
-    .nav-container .logo {
+    #nav-container .logo {
         font-size: 1.2rem;
         z-index: 2;
     }
 
-    .nav {
+    .supernav {
         flex-direction: column;
         gap: 2rem;
     }
-    .nav--ul__one,
-    .nav--ul__two {
+    .nav--ul__one {
         flex-direction: column;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        background-color: #4D4DDB;
-        color: white;
+        gap: .6rem;
     }
 
     #hamburgerSuperMenu {
@@ -82,22 +68,35 @@ header {
         z-index: 2;
     }
 
-    .nav {
+    .supernav {
+        display: none;
         position: absolute;
-        top: 4%;
+        top: 0;
         right: -100%;
         bottom: 0;
         width: 100%;
-        align-items: center;
+        align-items: center;                                       
         text-align: center;
-        background-color: #4D4DDB;
         color: white;
-        transition: 0.30s ease-in-out;
+        transition: 0.15s ease-in-out;
     }
-    .nav.active  {
-        background-color: #4D4DDB;
+    .supernav.active,.nav--ul__one {
+        display: block;
+        position: relative;
+        flex-direction: column;
         right: 0;
-        top: 4%;
+        top: 10%;
+        transition: 0.30s ease-in-out;
+
     }
 
 }
+
+.radio input ~ label {
+    background-color: white;
+    color: black;
+    }
+    .radio input:checked ~ label {
+    background-color: #fef08a;
+    color: black;
+    }
