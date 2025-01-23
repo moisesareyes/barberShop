@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <link type="text/css" rel="stylesheet" href="/src/css/styles.css">
+    <link href="/src/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="/src/js/components.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div id="nav-container" class="bg-yellow-200 flex flex-wrap items-center p-4">
+        <a href="/src/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="/src/img/vinillo.png" class="h-16" alt="Logo">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap">Disco Barber</span>
+        </a>
+    </div>
+</header>
+<div id="team" class="section relative pt-20 pb-8 max-w-screen-lg bg-white flex flex-wrap justify-center">
+  <div class="flex flex-col overflow-x-auto">
+      <div class="sm:-mx-6 lg:-mx-8">
+        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+          <div class="overflow-x-auto">
+            <div class="md:w-full px-3 flex place-items-center justify-items-center justify-center self-center text-center content-center object-center place-self-center bg-center">
+              <p>USERS</p>
+            </div>
+            <table id="adminUsers" class="min-w-full text-left text-sm font-light">
+              <thead class="border-b font-medium dark:border-neutral-500">
+                <tr>
+                  <th scope="col" class="px-6 py-4">ID</th>
+                  <th scope="col" class="px-6 py-4">USERNAME</th>
+                  <th scope="col" class="px-6 py-4">NOMBRE COMPLETO</th>
+                  <th scope="col" class="px-6 py-4">EMAIL</th>
+                  <th scope="col" class="px-6 py-4">TLF</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="flex flex-col overflow-x-auto">
+    <div class="sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+        <div class="overflow-x-auto">
+          <div class="overflow-x-auto">
+            <div class="md:w-full px-3 flex place-items-center justify-items-center justify-center self-center text-center content-center object-center place-self-center bg-center">
+              <p>AGENDA</p>
+            </div>          <table id="adminAgenda" class="min-w-full text-left text-sm font-light">
+            <thead class="border-b font-medium dark:border-neutral-500">
+              <tr>
+                <th scope="col" class="px-6 py-4">ID</th>
+                <th scope="col" class="px-6 py-4">RESERVANTE</th>
+                <th scope="col" class="px-6 py-4">BARBERO</th>
+                <th scope="col" class="px-6 py-4">PAGO REF</th>
+                <th scope="col" class="px-6 py-4">FECHA</th>
+                <th scope="col" class="px-6 py-4">HORARIO</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL -->
+<section id="superLogin1" class="superLogin1">
+  <div class="superLogin1-container">
+      <form id="team" class="section relative pt-20 pb-8 md:pt-16 bg-white flex justify-center">
+          <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+              <div class="-mx-3 md:flex mb-6">
+                  <div class="md:w-full px-3 flex justify-center">
+                      <img src="/src/img/vinillo.png" class="h-16" alt="Logo">
+                      <span class="self-center text-2xl font-semibold whitespace-nowrap">Disco Barber</span>
+                  </div>
+              </div>
+              <div class="-mx-3 md:flex mb-6">
+                  <div class="md:w-full px-3">
+                      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="superUser">Nombre de usuario</label>
+                      <input required class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-3 px-4 mb-3" id="superUser" type="text" placeholder="Usuario">
+                  </div>
+              </div>
+              <div class="-mx-3 md:flex mb-6">
+                  <div class="md:w-full px-3">
+                      <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="superPass">Password</label>
+                      <input required class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-3 px-4 mb-3" id="superPass" type="password" placeholder="***************">
+                  </div>
+              </div>
+              <div class="-mx-3 md:flex mb-6 flex justify-center">
+                  <div class="md:w-full px-3 flex justify-center">
+                      <button type="submit" onclick="allMashup()" class="inline-block text-base font-bold px-12 py-2 border border-accent-400 rounded-lg text-gray-900 cursor-pointer bg-yellow-200 backdrop-blur-3xl">INICIAR SESION</button>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+</section>
+<script src="/src/js/app.js"></script>
+</body>
+</html>

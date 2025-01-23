@@ -1,27 +1,54 @@
-var varHeader = `    
+if("token" in sessionStorage == false){
+    var varHeader = `    
     <header class="header">
         <div id="nav-container" class="bg-yellow-200 flex flex-wrap items-center p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="/src/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/src/img/vinillo.png" class="h-16" alt="Logo">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap">Disco Barber</span>
             </a>
             <nav id="supernav" class="supernav">
                 <ul class="nav--ul__one">
                     <li class="nav-link">
-                        <a id="red" href="#" class="text-gray-900 hover:underline">AGENDAR CITA</a>
+                        <a href="#" class="text-gray-900 hover:underline" id="login-show">INICIAR SESION</a>
                     </li>
                     <li class="nav-link">
-                        <a id="red" href="#" class="text-gray-900 hover:underline">PRODUCTOS</a>
+                        <a id="red" href="/src/info.html" class="text-gray-900 hover:underline">INFORMACION</a>
                     </li>
                     <li class="nav-link">
-                        <a id="red" href="#" class="text-gray-900 hover:underline">INFORMACION</a>
+                        <a id="red" href="/src/registro.html" class="text-gray-900 hover:underline">REGISTRO</a>
                     </li>
                 </ul>
             </nav>
             <span id="hamburgerSuperMenu">menu</span>
         </div>
     </header>
-`;
+`;}
+else{
+    var varHeader = `    
+    <header class="header">
+        <div id="nav-container" class="bg-yellow-200 flex flex-wrap items-center p-4">
+            <a href="/src/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/src/img/vinillo.png" class="h-16" alt="Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap">Disco Barber</span>
+            </a>
+            <nav id="supernav" class="supernav">
+                <ul class="nav--ul__one">
+                    <li class="nav-link">
+                        <a id="red" href="/src/agenda.html" class="text-gray-900 hover:underline">AGENDAR CITA</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="red" href="/src/info.html" class="text-gray-900 hover:underline">INFORMACION</a>
+                    </li>
+                    <li class="nav-link">
+                        <a id="logOutBtn" href="#" class="text-gray-900 hover:underline">CERRAR SESION</a>
+                    </li>
+                </ul>
+            </nav>
+            <span id="hamburgerSuperMenu">menu</span>
+        </div>
+    </header>
+`;}
+
 class supaHeader extends HTMLElement {
     constructor(){
         super();

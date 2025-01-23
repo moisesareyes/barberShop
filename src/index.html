@@ -8,34 +8,26 @@
     <link href="/src/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="/src/js/components.js"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                accent: {"50":"#fff5f0","100":"#ffd6c2","200":"#feb795","300":"#fe9868","400":"#fd783c","500":"#fb580f","600":"#db4603","700":"#b03802","800":"#862b01","900":"#5a1d00","950":"#2f0f00"}
-              }
-            }
-          }
-        }
-      </script>
 </head>
 <body>
-<supa-header></supa-header>
 
+<supa-header></supa-header>
     <!-- PAGINA PRINCIPAL -->
+<div id="forsingle">
+    
+</div>
 <div i>
     <section class="h-dvh w-dvw max-h-[80rem] relative">
-        <div class="absolute inset-0 z-[1]">
+        <div class="absolute inset-0 ">
             <img id="principal" class="h-full w-full object-cover object-center" src="/src/img/download.png" alt="">
         </div>
-        <div class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
+        <div class="max-w-[120rem] mx-auto h-full relative px-6 md:px-8 lg:px-10">
             <div class="h-full w-full  flex flex-col relative space-y-6">
                 <div class="mt-auto mb-0 text-gray-50 md:pb-36 space-y-6">
                     <h1 class="text-3xl md:text-5xl max-w-[30rem] font-bold">Bienvenidos a Disco Barber Shop</h1>
                     <p class="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                     <div class="md:flex-row flex-col flex gap-4">
-                        <button class="inline-block text-base font-bold px-12 py-2 border border-accent-400 rounded-lg text-gray-900 cursor-pointer bg-yellow-200 backdrop-blur-3xl">AGENDAR CITA</button>
+                        <button id="redAgenda" class="inline-block text-base font-bold px-12 py-2 border border-accent-400 rounded-lg text-gray-900 cursor-pointer bg-yellow-200 backdrop-blur-3xl">AGENDAR CITA</button>
                     </div>
                 </div>
             </div>
@@ -207,7 +199,54 @@
         <!-- end row -->
     </div>
 </div></div></div>
+<!-- MODAL -->
+<section id="loginModal" class="loginModal">
+    <div class="modal-container">
+        <div class="closeLogin">
+            <div class="md:w-full relative flex justify-center ">
+                <button type="button" id="closeLogin" class="inline-block text-base font-bold px-12 py-2 rounded-sm text-gray-900 cursor-pointer backdrop-blur-3xl">>> X <<</button>
+            </div>
+        </div>
+        <form id="team" class="section relative pt-20 pb-8 md:pt-16 bg-white flex justify-center">
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+                <div class="-mx-3 md:flex mb-6">
+                    <div class="md:w-full px-3 flex justify-center">
+                        <img src="/src/img/vinillo.png" class="h-16" alt="Logo">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap">Disco Barber</span>
+                    </div>
+                </div>
+                <div class="-mx-3 md:flex mb-6">
+                    <div class="md:w-full px-3">
+                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="superUser">Nombre de usuario</label>
+                        <input required maxlength="20" minlength="5" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-3 px-4 mb-3" id="superUser" type="text" placeholder="Usuario" onkeypress="espacios(this)">
+                    </div>
+                </div>
+                <div class="-mx-3 md:flex mb-6">
+                    <div class="md:w-full px-3">
+                        <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="superPass">Password</label>
+                        <input required class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey rounded py-3 px-4 mb-3" id="superPass" type="password" placeholder="***************" minlength="8" maxlength="20" onkeypress="espacios(this)">
+                    </div>
+                </div>
+                <div class="-mx-3 md:flex mb-6 flex justify-center">
+                    <div class="md:w-full px-3 flex justify-center">
+                        <button type="submit" onclick="allMashup()" class="inline-block text-base font-bold px-12 py-2 border border-accent-400 rounded-lg text-gray-900 cursor-pointer bg-yellow-200 backdrop-blur-3xl">INICIAR SESION</button>
+                    </div>
+                </div>
+                <div class="-mx-3 md:flex mb-6 flex justify-center">
+                    <div class="text-center min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible flex flex-col">
+                        <a class="font-light" href="/src/registro.html">Nuevo registro</a>
+                        <p class="font-light">------ o ------</p>
+                        <a class="font-light" href="#">¿Contraseña Olvidada?</a>		
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
 <script src="/src/js/supajs.js"></script>
+<script src="/src/js/login.js"></script>
+<script src="/src/js/modal.js"></script>
 <supa-footer></supa-footer>
 </body>
 </html>

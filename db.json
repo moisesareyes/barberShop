@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Rocky",
+      "realname": "No Soy Eduardo",
+      "pass": "12345678",
+      "mail": "info@gm.com",
+      "tlf": "04241234123"
+    },
+    {
+      "id": "2",
+      "username": "Rock",
+      "realname": "Eduardo",
+      "pass": "12345672",
+      "mail": "noinfo@gm.com",
+      "tlf": "04241234188"
+    },
+    {
+      "id": "5000",
+      "username": "ALFA",
+      "realname": "JOSE",
+      "pass": "12345678",
+      "mail": "ALFA@GM.COM",
+      "tlf": "11111111111"
+    },
+    {
+      "id": "5000",
+      "username": "can",
+      "realname": "you",
+      "pass": "12345678",
+      "mail": "yo@gm.com",
+      "tlf": "55555555555"
+    },
+    {
+      "id": "5000",
+      "username": "Rocky",
+      "realname": "JOSE",
+      "pass": "12345678",
+      "mail": "info@gm.com",
+      "tlf": "04241234123"
+    },
+    {
+      "id": "5000",
+      "username": "presley",
+      "realname": "Elvis",
+      "pass": "12345678",
+      "mail": "elvis@gm.com",
+      "tlf": "04241701836"
+    },
+    {
+      "id": "5000",
+      "username": "NosoyRocky",
+      "realname": "O tal vez si...",
+      "pass": "12345678",
+      "mail": "infonop@gm.com",
+      "tlf": "12345678946"
+    }
+  ],
+  "agenda": [
+    {
+      "id": "1",
+      "reserv": "Rocky",
+      "barber": "Bryce Harper",
+      "pago": "pago",
+      "fecha": "2025-01-22",
+      "hour": "10AM"
+    },
+    {
+      "id": "2",
+      "reserv": "Luch",
+      "barber": "Bryce Harper",
+      "pago": "pago2",
+      "fecha": "2025-01-22",
+      "hour": "11AM"
+    },
+    {
+      "id": "5000",
+      "reserv": "predeterminado",
+      "barber": "BRYCE HARPER",
+      "pago": "20000000000000000000",
+      "fecha": "2025-01-25",
+      "hour": "5PM"
+    },
+    {
+      "id": "5000",
+      "reserv": "predeterminado",
+      "barber": "BRYCE HARPER+1",
+      "pago": "12111212222222222222",
+      "fecha": "2025-01-23",
+      "hour": "3PM"
+    },
+    {
+      "id": "5000",
+      "reserv": "predeterminado",
+      "barber": "BRYCE HARPER",
+      "pago": "55555555555555555555",
+      "fecha": "2025-01-24",
+      "hour": "5PM"
+    },
+    {
+      "id": "5000",
+      "reserv": "presley",
+      "barber": "BRYCE HARPER",
+      "pago": "20000000000000000000",
+      "fecha": "2025-01-23",
+      "hour": "3PM"
+    }
+  ],
+  "superUser":[
+    {
+      "user":"admin",
+      "pass":"123"
+    },
+    {
+      "user":"admin",
+      "pass":"admin"
+    }
+  ]
+}
